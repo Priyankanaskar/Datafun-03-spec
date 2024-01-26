@@ -1,33 +1,33 @@
-Python Project Module 3  datafun-03-spec
+# Python Project Module 3  datafun-03-spec
 
-Overview
+ # Overview
 Project 3 emphasizes skills in using Git for version control, creating and managing Python virtual environments, and handling different types of data. The project involves fetching data from the web, processing it using appropriate Python collections, and writing the processed data to files.
 
-Deliverable Names
+ # Deliverable Names
 GitHub Repository: datafun-03-analytics
 Documentation: README.md
 Script: yourname_analytics.py
 Create a new GitHub repository with a default README.md and the required name. After creating it, use git to clone it down to your machine.
 
-External Dependencies
+ # External Dependencies
 This project will require the following external modules:
 
-requests
+# requests
 Version Control with Git
 Use Git for version control. In your README.md, document the steps of initializing a new project in GitHub and on your machine. Explain the process for creating the repository in both places, and document your workflow as you edit, add, commit, and push to GitHub.
 
-Objective
+# Objective
 Create a Python module that demonstrates skills in fetching data from the web, processing it using Python collections, and writing the processed data to different file formats.
 
-Requirements
+# Requirements
 Since the project uses modules beyond the Python Standard Library, create a project virtual environment.
 
-1. Environment Setup
-Create and activate a Python virtual environment for the project.
-Install all required packages into your local project virtual environment.
-After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
-Document the process and commands you used in your README.md.
-Add a .gitignore file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
+# Environment Setup
+1 Create and activate a Python virtual environment for the project.
+2 Install all required packages into your local project virtual environment.
+3 After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
+4 Document the process and commands you used in your README.md.
+5 Add a .gitignore file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
 Windows example:
 
 py -m venv .venv
@@ -40,10 +40,10 @@ python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install requests
 python3 -m pip freeze > requirements.txt
-2. Project Start
+# 2. Project Start
 In your Python file, create a docstring with a brief introduction to your project.
 
-3. Import Dependencies
+# 3. Import Dependencies
 Organize your project imports following conventions. For example, standard library imports first, then external library imports, then local module imports. Continue to practice importing your own modules and reuse your prior code when building your project folders. Conventional package import organization example:
 
 # Standard library imports
@@ -74,7 +74,7 @@ def fetch_and_write_excel_data(folder_name, filename, url):
         # Call your write function to save the response content
     else:
         print(f"Failed to fetch Excel data: {response.status_code}")
-5. Write Data
+# 5. Write Data
 Write functions to save content to different file types (e.g., text, CSV, JSON). For example:
 
 from pathlib import Path
@@ -91,7 +91,7 @@ def write_excel_file(folder_name, filename, data):
     with open(file_path, 'wb') as file:
         file.write(response.content)
         print(f"Excel data saved to {file_path}")
-6. Process Data and Generate Output
+# 6. Process Data and Generate Output
 Write functions to read, process, and write results using appropriate Python collections (lists, sets, dictionaries, etc.). Demonstrate understanding of each collection data type's characteristics and usage.
 
 Process the fetched data using appropriate Python collections and generate insightful analytics. The results of the processing should be formatted and written into text files.
@@ -104,7 +104,7 @@ Function 3. Process Excel Data: Extract and analyze data from Excel files to pro
 
 Function 4. Process JSON Data: Process JSON data with dictionaries to demonstrate proficiency in working with labeled data. Parse the JSON data to extract relevant information and present it in a simplified, human-readable text format.
 
-7. Implement Exception Handling
+# 7. Implement Exception Handling
 We know that reading and writing files - especially fetching items from the web is unreliable. Even with perfect code, there are many things that can go wrong. Use try/except/finally and implement exception handling to catch known possible errors and handle them gracefully in at least one of your functions. For example:
 
 import requests
@@ -133,7 +133,7 @@ def fetch_txt_data(folder_name, url):
         print(f"Oops: Something Else: {err}")
     except IOError as e:
         print(f"I/O error({e.errno}): {e.strerror}")
-8. Main Function
+# 8. Main Function
 Implement a main() function to test the folder creation functions and demonstrate the use of imported modules. For example:
 
 def main():
@@ -173,7 +173,7 @@ def main():
     # What do you want to extract and write? What export format will you use?
     # Process at least TWO unique data sets and describe your work clearly.
     # Use the README.md and your code to showcase your ability to work with data.
-9. Conditional Script Execution
+# 9. Conditional Script Execution
 Ensure the main function only executes when the script is run directly, not when imported as a module by using standard boilerplate code.
 
 Module Design
